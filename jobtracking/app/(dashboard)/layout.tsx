@@ -1,25 +1,22 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../globals.css";
+import Navbar from '@/components/Navbar';
+import Sidebar from '@/components/Sidebar';
 
-const inter = Inter({ subsets: ["latin"] });
+import { PropsWithChildren } from 'react';
 
-export const metadata: Metadata = {
-  title: "Job Tracking",
-  description: "Job applications tracking system for job seekers"
-};
-
-export default function RootLayout({
-  children
-}:{
-  children: React.ReactNode;
-}) {
+function layout({ children }: PropsWithChildren) {
   return (
-  
- 
-      <html lang="en">
-        <body className={inter.className}>{children}</body>
-      </html>
+    <main className='grid lg:grid-cols-5'>
+      {/* first-col hide on small screen */}
+      <div className='hidden lg:block lg:col-span-1 lg:min-h-screen'>
+        <Sidebar />
+      </div>
+      {/* second-col hide dropdown on big screen */}
 
+      <div className='lg:col-span-4'>
+        <Navbar />
+        <div className='py-16 px-4 sm:px-8 lg:px-16'>{children}</div>
+      </div>
+    </main>
   );
 }
+export default layout;

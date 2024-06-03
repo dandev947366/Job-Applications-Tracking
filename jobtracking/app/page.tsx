@@ -20,7 +20,7 @@ export default function Home() {
         </Link>
       
       </Button>
-      <Image src={LandingImg} atl="landing" className="hidden lg:block"/>
+      {/* <Image src={LandingImg} atl="landing" className="hidden lg:block"/> */}
     </section>
    </main>
   );
