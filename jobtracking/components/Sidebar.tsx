@@ -10,7 +10,7 @@ function Sidebar() {
 
   return (
     <aside className='py-4 px-8 bg-muted h-full'>
-      <Image src={Logo} alt='logo' className='mx-auto' />
+      {/* <Image src={Logo} alt='logo' className='mx-auto' /> */}
       <div className='flex flex-col mt-20 gap-y-4'>
         {links.map((link) => {
           return (
