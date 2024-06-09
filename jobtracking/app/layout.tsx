@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { manrope, molle } from "@/utils/fonts";
 import "./globals.css";
+import Sidebar from "@/components/Sidebar";
 import {
   ClerkProvider
 } from '@clerk/nextjs'
@@ -20,9 +21,13 @@ export default function RootLayout({
   
     <ClerkProvider>
       <html lang="en">
-      <h1 className={molle.className}>Job Tracking</h1>
-        <body className={manrope.className}>{children}</body>
-      </html>
+      <body className={manrope.className}>
+        <div className="wrapper grid grid-cols-[300px,minmax(0,1fr)] h-screen">
+          <Sidebar />
+          <main className="bg-gray-100 p-4 flex-1 overflow-y-auto">{children}</main>
+        </div>
+      </body>
+    </html>
     </ClerkProvider>
   );
 }
