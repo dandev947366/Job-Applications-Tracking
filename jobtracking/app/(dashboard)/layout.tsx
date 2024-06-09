@@ -8,7 +8,7 @@ function layout({ children }: PropsWithChildren) {
     <main className='grid lg:grid-cols-5'>
       {/* first-col hide on small screen */}
       <div className='hidden lg:block lg:col-span-1 lg:min-h-screen'>
-        <Sidebar />
+       
       </div>
       {/* second-col hide dropdown on big screen */}
 
