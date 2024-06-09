@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import {connectToDatabase} from '@/lib/mongoose'
 import Link from "next/link";
 export default function Home() {
+  const connect = connectToDatabase()
+  console.log("Home ~ connect: ", connect)
   return (
     <main>
       <section>
