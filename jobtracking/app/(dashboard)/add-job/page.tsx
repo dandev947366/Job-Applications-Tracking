@@ -1,15 +1,13 @@
 import React from 'react'
 import Heading from '@/components/typography/Heading'
-import Company from '@/components/company/Company'
-const AddJob = () => {
+import AddJob from '@/components/add-job/AddJob'
+const AddJobPage = () => {
   return (
     <div>
       <Heading>Add Job</Heading>
-     <Company  />
-     <Company  />
-     <Company  />
+    <AddJob  />
     </div>
   )
 }
 
-export default AddJob
+export default AddJobPage

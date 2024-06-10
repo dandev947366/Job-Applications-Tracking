@@ -8,9 +8,12 @@ function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className='py-4 px-8 bg-muted h-full bg-slate-200'>
-   
-      <div className='flex flex-col mt-20 gap-y-4'>
+    <div className='py-4 px-8 bg-muted h-full bg-slate-200'>
+ <a href="/" className="font-bold text-3xl inline-block m-5">
+        Job<span className="text-primary"> Tracking</span>
+      
+      </a>
+      <div className='p-5 border-r border-r-gray-200 flex flex-col gap-2'>
         {links.map((link) => {
           const isActive = pathname === link.href;
           return (
@@ -19,10 +22,12 @@ function Sidebar() {
               key={link.href}
               variant={isActive ? 'default' : 'link'}
             >
+     
               <Link
                 href={link.href}
-                className={`flex items-center gap-3 p-3 rounded-md transition-all ${
-                  isActive ? 'bg-blue-500 text-white' : 'hover:bg-blue-500 hover:text-white hover:'
+                
+                className={`mb-5 w-full flex items-center gap-3 p-3 h-full rounded-md transition-all ${
+                  isActive ? 'bg-blue-500 text-white' : 'hover:bg-blue-500 hover:text-white'
                 }`}
               >
                 {link.icon} <span className='capitalize'>{link.label}</span>
@@ -31,7 +36,7 @@ function Sidebar() {
           );
         })}
       </div>
-    </aside>
+    </div>
   );
 }
 
