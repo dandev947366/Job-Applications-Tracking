@@ -22,6 +22,11 @@ const links: NavLink[] = [
     label: 'stats',
     icon: <AreaChart />,
   },
+  {
+    href: '/companies',
+    label: 'companies',
+    icon: <AreaChart />,
+  },
 ];
 
 export default links;

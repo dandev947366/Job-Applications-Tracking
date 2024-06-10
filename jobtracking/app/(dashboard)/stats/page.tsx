@@ -1,11 +1,11 @@
-
+import Heading from '@/components/typography/Heading'
 
 export default function StatsPage() {
 	
 
 	return (
 		<>
-			<h1 className="text-4xl">StatsPage</h1>
+			<Heading>Stats Page</Heading>
 		</>
 	);
 }
