@@ -3,7 +3,7 @@ import links from '@/utils/links';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { usePathname } from 'next/navigation';
-
+import ThemeToggle from '@/components/ThemeToggle'
 function Sidebar() {
   const pathname = usePathname();
 
@@ -36,6 +36,7 @@ function Sidebar() {
           );
         })}
       </div>
+      <ThemeToggle  />
     </div>
   );
 }
