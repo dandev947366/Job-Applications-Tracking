@@ -11,7 +11,13 @@ export type JobType = {
   status: string;
   mode: string;
 };
-
+export type TCreateUserParams = {
+  clerkId: string
+  username: string
+  email_address: string
+  name?:string
+  avatar?: string
+}
 export enum JobStatus {
   Pending = 'pending',
   Interview = 'interview',

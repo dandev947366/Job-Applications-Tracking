@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={manrope.className}>
         <div className="wrapper grid grid-cols-[300px,minmax(0,1fr)] h-screen">
           <Sidebar />
-          <main className="bg-gray-100 p-4 flex-1 overflow-y-auto">{children}</main>
+          <main className="bg-gray-100">{children}</main>
         </div>
       </body>
     </html>

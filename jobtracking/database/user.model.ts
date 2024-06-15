@@ -15,15 +15,20 @@ export interface IUser extends Document {
 const userSchema = new Schema<IUser>({
     clerkId: {
         type: String,
+        required: true
     },
     name: {
         type: String,
     },
     username:{
         type: String,
+        unique: true,
+        required: true
     },
     email_address:{
         type: String,
+        unique: true,
+        required: true
     },
     avatar:{
         type: String,
