@@ -22,10 +22,10 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
       <body className={manrope.className}>
-        <div className="wrapper grid grid-cols-[300px,minmax(0,1fr)] h-screen">
-          <Sidebar />
-          <main className="bg-gray-100">{children}</main>
-        </div>
+      <div className="grid grid-cols-[300px,1fr]">
+  <Sidebar />
+  <main className="bg-gray-100 overflow-y-auto">{children}</main>
+</div>
       </body>
     </html>
     </ClerkProvider>
